@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyAppStore</string>
+    <string name="input_email_login">Nhập Email</string>
+    <string name="input_password_login">Nhập password</string>
+    <string name="input_email_register">Nhập Email đăng ký</string>
+    <string name="input_password_register">Nhập password </string>
+    <string name="login_title">Đăng nhập</string>
+    <string name="fblogin">Đăng nhập Facebook</string>
+    <string name="lostpass">Quên mật khẩu</string>
+    <string name="register_new">Đăng ký mới</string>
+    <string name="register_account">Đăng ký tài khoản</string>
+    <string name="backtologin">Quay lại</string>
+    <string name="note_register">Vui lòng đăng ký với email mà bạn sử dụng để xác nhận và tránh các sự cố về tài khoản!</string>
+    <string name="register_account_fb">Đăng ký bằng Facebook</string>
+    <string name="email_error">Email không đúng định dạng</string>
+    <string name="email_verification">Vui lòng truy cập email để xác thực tài khoản</string>
+    <string name="login_success">Đăng nhập thành công</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
