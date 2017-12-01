@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "910186045929",
-    "firebase_url": "https://myappstore-d1231.firebaseio.com",
-    "project_id": "myappstore-d1231",
-    "storage_bucket": "myappstore-d1231.appspot.com"
+    "project_number": "246554345547",
+    "firebase_url": "https://docstore-5dbaf.firebaseio.com",
+    "project_id": "docstore-5dbaf",
+    "storage_bucket": "docstore-5dbaf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:910186045929:android:d18381f729aafc03",
+        "mobilesdk_app_id": "1:246554345547:android:d18381f729aafc03",
         "android_client_info": {
           "package_name": "hust.trinhnd.myappstore"
         }
       },
       "oauth_client": [
         {
-          "client_id": "910186045929-j6a1r3qufjbpv4psf3vkbjf02ms8pnvo.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "hust.trinhnd.myappstore",
-            "certificate_hash": "af8e64008044a13f85aecfbd061c8d66c04a7f16"
-          }
-        },
-        {
-          "client_id": "910186045929-dm23ic2vrh8amk2brisa174e9atl1b5e.apps.googleusercontent.com",
+          "client_id": "246554345547-dl5q7m272jpgsfjr8rgsjthb8rialm1p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdbCFXvkWoCbv5rmDy7Cee6TRuo2DKanc"
+          "current_key": "AIzaSyCUQ8mnXgCl2XlKYR5uWqrhbZNFEgiWdHY"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "910186045929-dm23ic2vrh8amk2brisa174e9atl1b5e.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
