@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="hust.trinhnd.myappstore.activity.ViewCommentActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_main_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_main_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/unknown_user" />
+
+        <TextView
+            android:id="@+id/tv_main_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="#unknown"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tv_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_main_user"
+        android:layout_marginTop="5dp"
+        android:text="Tiêu đề bài đăng"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <View
+        android:layout_below="@id/tv_main_title"
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/fl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_above="@id/ll_write_comment">
+
+        <TextView
+            android:id="@+id/tv_no_cmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chưa có bình luận nào cho bài đăng này"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_write_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_your_cmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_padding"
+            android:hint="Viết bình luận của bạn..."
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp" />
+
+        <Button
+            android:id="@+id/btn_cmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/background_border_padding_send"
+            android:text="Gửi"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

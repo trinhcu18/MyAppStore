@@ -70,17 +70,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@color/home_color"
+            android:background="@color/fb_backgound"
             android:text="@string/login_title"
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btn_fb_login"
+            android:id="@+id/btn_go_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_content"
-            android:background="@color/com_facebook_blue"
-            android:text="@string/fblogin"
+            android:background="@color/home_color"
+            android:text="@string/register_account"
             android:textColor="@color/white" />
 
         <View
@@ -94,22 +94,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_go_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:text="@string/register_new"
-                android:textAllCaps="false"
-                android:textColor="#000" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="fill_parent"
-                android:layout_margin="@dimen/padding_content"
-                android:background="@color/black" />
 
             <Button
                 android:id="@+id/btn_lost_pass"

@@ -6,9 +6,14 @@
     <color name="white_smoke">#F7F7F7</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-
     <color name="fb_backgound">#3b5998</color>
     <color name="gg_backgound">#d34836</color>
     <color name="home_color">#D81B60</color>
     <color name="com_facebook_blue">#3B5998</color>
+    <color name="red_button">#D8202A</color>
+    <color name="backround_color">#EEEEEE</color>
+    <color name="text_black">#000000</color>
+    <color name="yellow_color">#F4FF81</color>
+    <color name="NAVI_BG_IMAGE">#455968</color>
+    <color name="GREEN_COLOR">#7CD97C</color>
 </resources>

@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 import hust.trinhnd.myappstore.listener.RegisterListener;
-import hust.trinhnd.myappstore.Users;
+import hust.trinhnd.myappstore.model.User;
 import hust.trinhnd.myappstore.base.BaseFirebase;
 import hust.trinhnd.myappstore.utils.Constants;
 
@@ -39,7 +39,7 @@ public class RegisterService extends BaseFirebase {
      * @param passWord
      * @param listener
      */
-    public void registerAccount(String email, String passWord, final RegisterListener listener) {
+    public void registerAccount(String email, String passWord, final String name, final RegisterListener listener) {
         auth.createUserWithEmailAndPassword(email, passWord)
                 .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -54,9 +54,9 @@ public class RegisterService extends BaseFirebase {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             //Tiến hành thông tin user vào Database
-                                            Users users = new Users();
+                                            User users = new User();
                                             users.setUid(userFB.getUid());
-                                            users.setName("Mr.Test");
+                                            users.setName(name);
                                             users.setEmail(userFB.getEmail());
                                             createAccountInDatabase(users, new RegisterListener() {
                                                 @Override
@@ -91,7 +91,7 @@ public class RegisterService extends BaseFirebase {
      *
      * @param users
      */
-    public void createAccountInDatabase(Users users, final RegisterListener dbListener) {
+    public void createAccountInDatabase(User users, final RegisterListener dbListener) {
         mDatabase.child(Constants.USERS)
                 .child(users.getUid())
                 .setValue(users)

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FAFAFA">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#FAFAFA"
+                    android:src="@drawable/unknown_user"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="0.5dp" />
+
+                <TextView
+                    android:id="@+id/tv_post_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_profile_photo"
+                    android:background="#FAFAFA"
+                    android:text="Username"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_setting"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="#FAFAFA"
+                    android:src="@drawable/ic_more" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_layout1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Nôi dung tiêu đề"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_post_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_post_title"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_post_date"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/image_not_found" />
+
+            <TextView
+                android:id="@+id/tv_course_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_post"
+                android:padding="5dp"
+                android:text="Học phần"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_course_2"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Mô tả nội dung"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_18sp" />
+
+            <TextView
+                android:id="@+id/tv_post_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desc"
+                android:layout_marginLeft="5dp"
+                android:minHeight="100dp"
+                android:padding="5dp"
+                android:text="Không có mô tả nào cho bài đăng"
+                android:textSize="@dimen/txt_16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_post_desc"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="File đính kèm"
+                        android:textColor="@color/text_black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_filename"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="Không có file đính kèm"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@color/com_facebook_blue"
+                        android:text="Tải về"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/txt_18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_view_cmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_layout1"
+                android:background="@color/colorAccent"
+                android:text="Xem bình luận"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="#00ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_back_post"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:background="#fff"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_post"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.1"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="Bài đăng"
+                android:textColor="@color/red_button"
+                android:textSize="19sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:background="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginBottom="5dp"
+            android:background="@color/red_button" />
+
+        <include layout="@layout/layout_view_post" />
+    </LinearLayout>
+
+
+</LinearLayout>

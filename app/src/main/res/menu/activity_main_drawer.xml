@@ -4,22 +4,25 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chủ"/>
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_upload"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Đăng bài" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_post"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Bài đăng của bạn" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_comment"
+            android:icon="@drawable/ic_menu_cmt"
+            android:title="Bình luận của bạn" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Công cụ" />
     </group>
 
     <item android:title="Communicate">
@@ -34,5 +37,9 @@
                 android:title="Send" />
         </menu>
     </item>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout"
+        android:title="Đăng xuất" />
 
 </menu>

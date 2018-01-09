@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyAppStore</string>
+    <string name="app_name">DocuX</string>
     <string name="input_email_login">Nhập Email</string>
     <string name="input_password_login">Nhập password</string>
     <string name="input_email_register">Nhập Email đăng ký</string>
@@ -21,4 +21,23 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="search">Tìm kiếm...</string>
+    <string name="title_activity_main">DocuX</string>
+    <string name="upload_post">Đăng bài</string>
+    <string name="runtime_permissions_code">Please enable ALL permissions from app settings.</string>
+    <string name="up_post_date">Đăng ngày: </string>
+    <string name="date_format">dd-MM-yyyy (HH:mm:ss)</string>
+    <string name="latest_status">Các bài đăng mới nhất</string>
+    <string name="search_status">Kết quả tìm kiếm</string>
+    <string name="user_post_status">Các bài đăng của bạn</string>
+    <string name="reset_password_text">Vui lòng truy cập email để đổi lại mật khẩu</string>
+    <string name="not_allow">Bạn không thể xóa bài đăng của người khác</string>
+    <string name="postid">postId</string>
+    <string name="commentid">commentId</string>
+    <string name="post">post</string>
+    <string name="user">user</string>
+    <string name="userId">userId</string>
+    <string name="action_search">Tìm kiếm</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="no_file">Không có file đính kèm</string>
 </resources>

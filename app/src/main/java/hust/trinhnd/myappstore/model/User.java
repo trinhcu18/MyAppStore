@@ -1,4 +1,4 @@
-package hust.trinhnd.myappstore;
+package hust.trinhnd.myappstore.model;
 
 import java.io.Serializable;
 
@@ -6,14 +6,33 @@ import java.io.Serializable;
  * Created by Trinh on 02/11/2017.
  */
 
-public class Users implements Serializable {
+public class User implements Serializable {
     private String uid;
     private String name;
     private String email;
-    public Users() {
+    private String image;
+    private String status;
+
+    public String getImage() {
+        return image;
     }
 
-    public Users(String uid, String name, String email) {
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public User() {
+    }
+
+    public User(String uid, String name, String email) {
         this.uid = uid;
         this.name = name;
         this.email = email;
@@ -45,10 +64,16 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "Users{" +
+        return "User{" +
                 "uid='" + uid + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public void setAll(User userNew) {
+        this.email= userNew.getEmail();
+        this.uid= userNew.getUid();
+        this.name= userNew.getName();
     }
 }

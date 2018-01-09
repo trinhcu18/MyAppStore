@@ -26,9 +26,14 @@ public class RegisterActivity extends BaseActivity {
     Button btnReg;
     @BindView(R.id.btn_return)
     Button btnReturn;
+    @BindView(R.id.edt_name_register)
+    EditText edtNameReg;
     private RegisterService registerService;
     private String email;
     private String password;
+    private String name;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,18 +42,21 @@ public class RegisterActivity extends BaseActivity {
         registerService= new RegisterService(this);
     }
 
+
+
     @OnClick({R.id.btn_reg, R.id.btn_return})
     public void onViewClicked(View view){
         switch (view.getId()){
             case R.id.btn_reg:
                 if(checkInputData()){
                     showProgressDialog("Vui lòng đợi");
-                    registerService.registerAccount(email, password, new RegisterListener() {
+                    registerService.registerAccount(email, password,name, new RegisterListener() {
                         @Override
                         public void registerSuccess() {
                             hideProgressDialog();
                             edtEmailReg.setText("");
                             edtPassReg.setText("");
+                            edtNameReg.setText("");
                             AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                             builder.setTitle("Thông báo");
                             builder.setMessage(R.string.email_verification);
@@ -71,9 +79,10 @@ public class RegisterActivity extends BaseActivity {
     }
 
     private boolean checkInputData() {
-        if(!Utils.isEmpty(edtEmailReg) && !Utils.isEmpty(edtPassReg)){
+        if(!Utils.isEmpty(edtEmailReg) && !Utils.isEmpty(edtPassReg)&& !Utils.isEmpty(edtNameReg)){
             email = edtEmailReg.getText().toString().trim();
             password= edtPassReg.getText().toString().trim();
+            name = edtNameReg.getText().toString().trim();
             if(Utils.isEmailValid(email)){
                 edtEmailReg.requestFocus();
                 edtEmailReg.setError(getResources().getString(R.string.email_error));
